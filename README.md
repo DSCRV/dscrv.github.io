@@ -1,3 +1,16 @@
-# Google Developer Student Club - RVCE Chapter website
+> contains the main source for the
+> [website](https://dscrv.github.io) of our club
 
-Contains the main source for the website of our club
+### build
+
+```
+nix-shell
+zola build
+```
+
+### test
+
+```
+nix-shell
+zola serve
+```
