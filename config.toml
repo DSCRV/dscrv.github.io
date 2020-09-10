@@ -12,9 +12,11 @@ highlight_theme = "material-dark"
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
-theme = "dsc-theme"
-
 [extra]
+nav = [
+  { name = "About", path = "/about/" },
+  { name = "Blog", path = "/blog/" }
+]
 # Put all your custom variables here
 accent_light = "#3d5afe"
 accent = "#3d5afe"
