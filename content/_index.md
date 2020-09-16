@@ -17,3 +17,9 @@ generate_feed = false
 # Developer Student Clubs
 
 ### RV College of Engineering
+
+Developer Student Clubs are university based community
+groups for students interested in Google developer
+technologies. Students from all undergraduate or graduate
+programs with an interest in growing as a developer are
+welcome.

@@ -58,47 +58,26 @@ main {
 }
 
 .content .latest-container {
-  text-align: center;
   font-size: 1rem;
   margin-bottom: 2rem;
 }
+.content > p {
+    text-align: left;
+}
 
 .profile {
-  margin-right: 48px;
-  flex-shrink: 0;
+  text-align: center;
   position: relative;
 
   .profile-container {
-    width: 280px;
+    width: 250px;
     height: 373px;
-    animation: profile infinite 10s;
     background: white;
-  }
-
-  &:after,
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--accent-color);
-    z-index: -1;
-  }
-
-  &:after {
-    animation: front infinite 10s;
-    opacity: 0.5;
-  }
-
-  &:before {
-    animation: back infinite 10s;
-    opacity: 0.25;
   }
 }
 
 body {
+  text-align: center;
   box-sizing: border-box;
   display: flex;
   align-items: center;
