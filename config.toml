@@ -23,6 +23,10 @@ accent = "#3d5afe"
 default_og_image = "icon.png"
 blog_path = "blog"
 footer_about = ""
-not_found_message = "errm not found"
+not_found_message = """
+Oops, you've walked down the wrong route!
+
+[Back to safety](/).
+"""
 profile_large = "icon.png"
 profile_small = "icon.png"
