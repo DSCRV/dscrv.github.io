@@ -20,6 +20,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Poppins";
   font-weight: 500;
 }
 
@@ -27,6 +28,10 @@ body {
   b,
   strong {
     font-weight: 500;
+  }
+
+  p {
+      font-family: "Roboto";
   }
 
   blockquote {
@@ -61,7 +66,7 @@ a:visited {
 
 main {
   max-width: 700px;
-  padding-top: 8rem;
+  padding-top: 4rem;
   margin: auto;
 }
 
@@ -118,7 +123,7 @@ a.profile-icon {
   position: relative;
 
   img {
-    border-radius: 50%;
+      border-radius: 50%;
   }
 }
 
