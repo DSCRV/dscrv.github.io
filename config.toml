@@ -15,7 +15,8 @@ build_search_index = false
 [extra]
 nav = [
   { name = "About", path = "/about/" },
-  { name = "Blog", path = "/blog/" }
+  { name = "Blog", path = "/blog/" },
+  { name = "Events", path = "/event_log/" }
 ]
 # Put all your custom variables here
 accent_light = "#3d5afe"
