@@ -30,5 +30,15 @@ Oops, you've walked down the wrong route!
 
 [Back to safety](/).
 """
+
+# All the team member details to show as required
+team = [
+  {name = "Akshay Oppiliappan", img = "team/oppy.png", pos = "DSC Lead", description = """Nerdy, quirky but always pepper"""},
+  {name = "Ambu Karthik", img = "team/ambu.png", pos = "Co Lead", description = "Curious, funny but always Ambu"},
+  {name = "Manjunath Nayak", img = "team/manj.png", pos = "Technical Workshop Supervisor", description = "Fishy, cute but always Manja"},
+  {name = "Sai Keerthana Arun", img = "team/kits.png", pos = "Graphic Designer", description = "Smart debater, Kits"},
+  {name = "Shubh Shukla", img = "team/shub.png", pos = "Marketing & Communications", description = "Chill, fun and very shubh"},
+  {name = "Syed Farhan Ahmed", img = "team/syed.png", pos = "Machine Learning Expert", description = "Techy, smart and born to learn"}
+]
 profile_large = "icon.png"
 profile_small = "icon.png"

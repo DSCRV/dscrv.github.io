@@ -82,8 +82,44 @@ img {
   }
 }
 
-.team > p > img {
-  width: 300px;
-  height: 300px;
+.team {
+  display: grid;
+  grid-template-columns: 2;
+  justify-content: space-evenly;
+}
+
+.team > h1 {
+  grid-column: 1 / span 2;
+  justify-self: center;
+}
+
+.team > .team-text {
+  grid-column: 2;
+  text-align: center;
+  margin: auto;
+  height: 200px;
+}
+
+.team > .member {
+  margin: auto;
+  justify-items: center;
+}
+
+.team > img {
+  grid-column: 1;
+  width: 200px;
+  height: 200px;
   border: none;
+}
+
+@media screen and (max-width: 568px) {
+  .team {
+    grid-template-columns: 1;
+  }
+  .team > img {
+    grid-column: 1 / span 2;
+  }
+  .team > .team-text {
+    grid-column: 1 / span 2;
+  }
 }

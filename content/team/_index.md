@@ -14,15 +14,3 @@ generate_feed = false
 +++
 
 # The Team
-
-![Akshay Oppiliappan](oppy.png)\
-\
-![Ambu Karthik](ambu.png)\
-\
-![Manjunath Nayak](manj.png)\
-\
-![Sai Keerthana Arun](kits.png)\
-\
-![Shubh Shukla](shub.png)\
-\
-![Syed Farhan Ahmed](syed.png)
