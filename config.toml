@@ -33,12 +33,13 @@ Oops, you've walked down the wrong route!
 
 # All the team member details to show as required
 team = [
-  {name = "Akshay Oppiliappan", img = "team/oppy.png", pos = "DSC Lead", description = """Nerdy, quirky but always pepper"""},
-  {name = "Ambu Karthik", img = "team/ambu.png", pos = "Co Lead", description = "Curious, funny but always Ambu"},
-  {name = "Manjunath Nayak", img = "team/manj.png", pos = "Technical Workshop Supervisor", description = "Fishy, cute but always Manja"},
-  {name = "Sai Keerthana Arun", img = "team/kits.png", pos = "Graphic Designer", description = "Smart debater, Kits"},
-  {name = "Shubh Shukla", img = "team/shub.png", pos = "Marketing & Communications", description = "Chill, fun and very shubh"},
-  {name = "Syed Farhan Ahmed", img = "team/syed.png", pos = "Machine Learning Expert", description = "Techy, smart and born to learn"}
+    { name = "Akshay Oppiliappan", img = "team/oppy.png", pos = "DSC Lead", description = "I am a compsci undergrad, Rust programmer and an enthusiastic Vimmer. I write open-source stuff to pass time. I also design fonts: scientifica, curie." },
+    { name = "Ambu Karthik", img = "team/ambu.png", pos = "Co-Lead", description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+    { name = "Manjunath Nayak", img = "team/manj.png", pos = "Technical Workshop Supervisor", description = "CS undergrad who loves to dabble around with new technologies. Very proud to be a part of this club." },
+    { name = "Sai Keerthana Arun", img = "team/kits.png", pos = "Graphic Designer", description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+    { name = "Shubh Shukla", img = "team/shub.png", pos = "Marketing & Communications", description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+    { name = "Syed Farhan Ahmed", img = "team/syed.png", pos = "Machine Learning Expert", description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }
 ]
+
 profile_large = "icon.png"
 profile_small = "icon.png"

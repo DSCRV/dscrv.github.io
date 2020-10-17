@@ -13,13 +13,12 @@
     {{ section.content | safe }}
     {% for member in config.extra.team %}
       <!-- <div class="member"> -->
-        <img alt="{{ member.name }}" src="{{ member.img }}"/>
-        <div class="team-text">
-          <h4>{{ member.name }}</h4>
-          <h5>{{ member.pos }}</h5>
+      <img alt="{{ member.name }}" src="{{ resize_image(path=member.img, width=175, height=175, op="fill") }}"/>
+      <div class="team-text">
+          <p class="team-pos">{{ member.pos }}</p>
+          <p class="member-name">{{ member.name }}</p>
           <p>{{ member.description }}</p>
-        </div>
-        <br/>
+      </div>
       <!-- </div> -->
     {% endfor %}
   </div>
