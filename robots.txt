@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://dscrv.github.io/sitemap.xml

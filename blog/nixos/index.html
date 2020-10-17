@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #3d5afe;
+        --accent-color-light: #3d5afe;
+      }
+    </style>
+
+    <meta name="theme-color" content="#3d5afe" />
+
+    
+      <link rel="icon" href="https:&#x2F;&#x2F;dscrv.github.io&#x2F;processed_images&#x2F;444e76059742f47b00.png" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;dscrv.github.io&#x2F;processed_images&#x2F;444e76059742f47b00.png" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;dscrv.github.io&#x2F;processed_images&#x2F;6dfeb9b0bd094d5a00.png" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;dscrv.github.io&#x2F;processed_images&#x2F;3959b3b31b7ae92700.png" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;dscrv.github.io&#x2F;processed_images&#x2F;e644b27af091684500.png" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;dscrv.github.io&#x2F;processed_images&#x2F;3344ee474c2d849c00.png" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;dscrv.github.io&#x2F;processed_images&#x2F;d92103ca49c6bd5e00.png" />
+      <link rel="apple-touch-icon" sizes="384x384" href="https:&#x2F;&#x2F;dscrv.github.io&#x2F;processed_images&#x2F;b8dd2689e662c9cd00.png" />
+      <link rel="apple-touch-icon" sizes="512x512" href="https:&#x2F;&#x2F;dscrv.github.io&#x2F;processed_images&#x2F;c0d9496000275d3400.png" />
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+    
+    <meta property="og:image" content="https:&#x2F;&#x2F;dscrv.github.io&#x2F;icon.png">
+    
+
+    
+      
+        <meta name="description" content="This has got to be a meme right?" />
+        <meta name="twitter:description" content="This has got to be a meme right?">
+      
+    
+
+    
+      <meta name="twitter:title" content="NixOS">
+    
+
+    
+      <link rel="prerender" href="&#x2F;about&#x2F;" />
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+      <link rel="prerender" href="&#x2F;event_log&#x2F;" />
+    
+      <link rel="prerender" href="&#x2F;team" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;dscrv.github.io&#x2F;processed_images&#x2F;53af5229a2f8852200.png" />
+
+    <title>
+      
+        
+          NixOS
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://dscrv.github.io/main.css">
+    
+    
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;dscrv.github.io&#x2F;processed_images&#x2F;53af5229a2f8852200.png" alt="profile picture">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;about&#x2F;">About</a>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+            <a href="&#x2F;event_log&#x2F;">Events</a>
+          
+            <a href="&#x2F;team">The Team</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <h1 id="nixos">NixOS</h1>
+<p>I have been eyeing operating systems with functional package
+managers for a while now, aka, NixOS or Guix. Reproducible
+builds, declarative and rollback-able system configuration,
+system consistency, all sound pretty cool. I have been using
+NixOS for about a month now.</p>
+<h3 id="installation">Installation</h3>
+<p>I went with their minimal installation ISO. The installation
+was pretty smooth from start to end, no hitches there. The
+entire <a href="https://nixos.org/manual/nixos/stable/">manual</a> is
+available offline, and is accessible during the
+installation. Very handy.</p>
+<h3 id="setup">Setup</h3>
+<p>The entire system is configured via
+<code>/etc/nixos/configuration.nix</code>. Wifi, <code>libinput</code> gestures,
+audio, locale settings, there are options for literally
+everything.  You can declaratively write down the packages
+you want installed too. With fresh installs of most distros,
+I usually fumble with getting things like screen backlight
+and media keys to work. If I do manage to fix it, I can't
+carry it forward to future installations trivially. Getting
+all my hardware to work on NixOS is as easy as:</p>
+<pre style="background-color:#fafafa;">
+<code><span style="color:#61676c;">{
+    server.xserver.libinput.enable = true;  # touchpad
+    programs.light.enable = true;           # backlight
+    hardware.pulseaudio.enable = true;      # audio
+    networking.wireless.enable = true;      # wifi
+}
+</span></code></pre><h3 id="developing-with-nix">Developing with Nix</h3>
+<p>Nix makes it easy to enter environments that aren't affected
+by your system configuration using <code>nix-shell</code>.</p>
+<p>Builds may be generated by specifying a <code>default.nix</code> file,
+and running <code>nix-build</code>. Conventional package managers
+require you to specify a dependency list, but there is no
+guarantee that this list is complete. The package will build
+on your machine even if you forget a dependency. However,
+with Nix, packages are installed to <code>/nix/store</code>, and not
+global paths such as <code>/usr/bin/...</code>, if your project builds,
+it means you have included every last one.</p>
+<p>Issues on most my projects have been &quot;unable to build
+because <code>libxcb</code> is missing&quot;, or &quot;this version of <code>openssl</code>
+is too old&quot;. Tools like <code>cargo</code> and <code>pip</code> are poor package
+managers. While they <em>can</em> guarantee that Rust or Python
+dependencies are met, they make assumptions about the
+target system.</p>
+<p>For example, <a href="https://github.com/nerdypepper/site">this
+website</a> is now built
+using Nix, anyone using Nix may simply, clone the repository
+and run <code>./generate.sh</code>, and it would <em>just work</em>, while
+keeping your global namespace clean™:</p>
+<pre style="background-color:#fafafa;">
+<code><span style="font-style:italic;color:#abb0b6;">#! /usr/bin/env nix-shell
+#! nix-shell -i bash -p eva pandoc esh
+
+# some bash magic ;)
+</span></code></pre>
+<p>Dependencies are included with the <code>-p</code> flag, the shell
+script is executed with an interpreter, specified with the
+<code>-i</code> flag.</p>
+<h3 id="impressions">Impressions</h3>
+<p>NixOS is by no means, simple. As a newcomer, using Nix was
+not easy, heck, I had to learn a purely functional, lazy
+language to just build programs. There is a lot to be
+desired on the tooling front as well. A well fleshed out LSP
+plugin would be nice (<a href="https://github.com/nix-community/rnix-lsp">rnix-lsp looks
+promising</a>).</p>
+<p>Being able to rollback changes at a system level is cool.
+Package broke something? Just <code>nixos-rebuild switch --rollback</code>!  Deleted <code>nix</code> by mistake? Find the binary in
+<code>/nix/store</code> and rollback! You aren't punished for not
+thinking twice.</p>
+<p>I don't see myself switching to anything else in the near
+future, NixOS does a lot of things right. If I ever need to
+reinstall NixOS, I can generate an <a href="https://github.com/nix-community/nixos-generators">image of my current
+system</a>.</p>
+<p><a href="https://u.peppe.rs/6m.png"><img src="https://u.peppe.rs/6m.png" alt="" /></a></p>
+
+
+    </main>
+  </body>
+</html>
